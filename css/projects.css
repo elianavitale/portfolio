@@ -1,0 +1,83 @@
+/* projects section styling */
+.projects{
+    display: flex;
+    background: 
+        /* transparent black, faked with gradient */ 
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+        ),
+        /* image */
+        url("../assets/images/background.jpg") no-repeat center;
+    color: var(--white);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.projects .proj-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.projects .proj-content .card{
+    width: calc(33% - 20px);
+    border-radius: 10px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.projects .proj-content #copywriting{
+    background: url("../assets/images/copywriting.jpg") center;
+    background-size: cover;
+}
+.projects .proj-content #healthy{
+    background: url("../assets/images/healthy.jpg") center;
+    background-size: cover;
+}
+.projects .proj-content .card .box{
+    color: var(--black);
+    height: 250px;
+    padding: 50px 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+}
+.projects .proj-content .card:hover .box{
+    visibility: visible;
+    background: 
+        /* transparent black, faked with gradient */ 
+        linear-gradient(
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.75)
+        );
+}
+.projects .proj-content .card .text{
+    font-size: 25px;
+    font-weight: 200;
+    margin: 0 0 10px 0;
+    color: var(--primaryDark);
+}
+.projects .proj-content .card p{
+    font-size: 17px;
+}
+.projects .proj-content .card .hint{
+    font-size: 15px;
+    margin: 30px 0 0 0;
+    opacity: 0.7;
+}
+
+/* responsive media query start */
+@media (max-width: 947px){
+    .projects .proj-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 690px) {
+    .projects .proj-content .card{
+        width: 100%;
+    }
+}

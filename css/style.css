@@ -1,0 +1,120 @@
+/*  import other css files */
+@import "navbar.css";
+@import "home.css";
+@import "about.css";
+@import "projects.css";
+@import "skills.css";
+@import "certificates.css";
+@import "contact.css";
+@import "footer.css";
+
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;400;500;600&family=Allura&display=swap');
+
+/* color palette */
+:root {
+    --gray: #242424;
+    --black: #000;
+    --white: #FFF;
+    --primaryLight: #46C0A3;
+    --primaryDark: #FF8A5B; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* hide scroll bar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.home, .about, .projects, .skills, .certificates, .contact, footer{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 100;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+section .subtitle{
+    position: relative;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 200;
+    margin-bottom: 50px;
+    color: var(--primaryLight);
+}
+
+/* scroll up btn styling */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--primaryLight);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: var(--white);
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    background: var(--primaryDark);
+}
+
+/* responsive media query start */
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .max-width{
+        max-width: 930px;
+    }
+}
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+}
+@media (max-width: 500px) {
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
